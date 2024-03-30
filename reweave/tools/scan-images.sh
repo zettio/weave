@@ -27,7 +27,7 @@ for im in ${IMAGE_LIST};do
 done
 
 #UNIQUECOUNT=$(tail -n +2 -q "${SCANDIR}/weave-npc-list-vulns.txt" "${SCANDIR}/weave-kube-list-vulns.txt" | sort -u | wc -l)
-UNIQUECOUNT=$(tail -n +2 -q "${SCANDIR}"/*-list-vulns.txt  | sort -u | wc -l)
+UNIQUECOUNT=$(tail -n +2 -q "${SCANDIR}"/*-list-vulns.txt  | sed -e "s/\s\{2,\}/,/g" | sort -u | wc -l)
 BADGECOLOR="blue"
 
 if [ "$UNIQUECOUNT" -gt "0" ]; then
