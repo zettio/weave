@@ -10,7 +10,7 @@ require (
 	github.com/containernetworking/cni v1.1.2
 	github.com/containernetworking/plugins v1.2.0
 	github.com/coreos/go-iptables v0.6.0
-	github.com/docker/docker v24.0.7+incompatible
+	github.com/docker/docker v24.0.9+incompatible
 	github.com/docker/libnetwork v0.8.0-dev.2.0.20180212220201-119badbd737b
 	github.com/docker/machine v0.14.0
 	github.com/fsouza/go-dockerclient v1.10.0

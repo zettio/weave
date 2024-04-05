@@ -7,7 +7,7 @@ ARG ALPINE_BASEIMAGE=alpine:3.19.1
 # It will be built only once for a given build platform. Subsequent
 # stages will start from this and cross-compile for each target
 # architecture.
-FROM --platform=${BUILDPLATFORM} golang:1.21.6-bullseye AS builderbase
+FROM --platform=${BUILDPLATFORM} golang:1.21.9-bullseye AS builderbase
 
 # Support Raspberry Pi 2 and newer
 ENV GOARM 7
@@ -23,8 +23,11 @@ ENV DEB_CROSSPLATFORMS \
 
 # Install the build-essential and crossbuild-essential-ARCH packages
 RUN <<EOCROSSCOMPILERS
+set -e
+echo 'Acquire::Retries "6";' > /etc/apt/apt.conf.d/80-retries
 for platform in ${DEB_CROSSPLATFORMS}; do dpkg --add-architecture $platform; done 
-apt-get update 
+apt-get update --error-on=any
+apt-get upgrade -y
 apt-get install -y build-essential
 for platform in ${DEB_CROSSPLATFORMS}; do apt-get install -y crossbuild-essential-${platform}; done 
 apt-get clean

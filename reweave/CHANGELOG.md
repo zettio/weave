@@ -2,7 +2,15 @@
 
 All changes made to the weave net codebase during the reweave effort will be documented in this file.
 
-## 2.8.4
+## 2.8.5-beta1
+
+### Changed
+
+* Upgraded github.com/docker/docker to 24.0.9+incompatible
+* Ran `go mod vendor`
+* Modified `reweave/build/Dockerfile`, to cater for timeouts and other errors during `apt` operations
+
+## 2.8.4 (c3afe552)
 
 ### Changed
 
