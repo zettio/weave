@@ -26,8 +26,7 @@ RUN <<EOCROSSCOMPILERS
 set -e
 echo 'Acquire::Retries "6";' > /etc/apt/apt.conf.d/80-retries
 for platform in ${DEB_CROSSPLATFORMS}; do dpkg --add-architecture $platform; done 
-apt-get update --error-on=any
-apt-get upgrade -y
+apt-get update
 apt-get install -y build-essential
 for platform in ${DEB_CROSSPLATFORMS}; do apt-get install -y crossbuild-essential-${platform}; done 
 apt-get clean

@@ -1,3 +1,10 @@
+## Release 2.8.5
+
+This release has upgraded dependencies based on CVE recommendations.
+
+* Build with Go version 1.21.9
+* A dependency has been updated
+
 ## Release 2.8.4
 
 The alpine base image used by `weave-kube` and `weave-npc` was upgraded to version 3.19.1 in the previous release. In this version, the default iptables backend is nftables, and the legacy backend is not included. Our scripts and programs assume legacy as the default backend, and change to nft if autodetected, or if we ask for it. So, the build Dockerfile (reweave/build/Dockerfile) was changed to also install the Alpine `iptables-legacy` package , and change the `iptables-{save,restore}` symbolic links to point to the legacy backend by default.
