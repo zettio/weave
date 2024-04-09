@@ -118,12 +118,14 @@ network does not block ESP traffic (IP protocol 50). For instance
 on Google Cloud Platform a firewall rule for allowing ESP traffic has
 to be installed.
 
-**<a name="own-image"></a>Q: Why do you use your own Docker image `weaveworks/ubuntu`?**
+~~**<a name="own-image"></a>Q: Why do you use your own Docker image `weaveworks/ubuntu`?**
 
 The official Ubuntu image does not contain the `ping` and `nc`
 commands which are used in many of our examples throughout the
 documentation. The `weaveworks/ubuntu` image is simply the official
-Ubuntu image with those two commands added.
+Ubuntu image with those two commands added.~~
+We now use the official `alpine:latest` image, which already has
+these two commands.
 
 
 **See Also**

@@ -11,6 +11,22 @@ if [ -z "${IMAGE_VERSION}" ] || [ -z "${REGISTRY_USER}" ] ; then
     exit 1
 fi
 
-PLUGIN_IMAGE=${REGISTRY_USER}/net-plugin:${IMAGE_VERSION}
+# This variable is used to control the architectures for
+# which the plugin will be built.
+: "${PLATFORMS:=amd64,arm,arm64,ppc64le,s390x}"
 
-docker plugin rm "${PLUGIN_IMAGE}" 2>/dev/null
+# $1 - Architecture to build for
+delete_plugin() {
+    PLUGIN_ARCH=${1:-amd64}
+    PLUGIN_IMAGE=${REGISTRY_USER}/net-plugin:${IMAGE_VERSION}-${PLUGIN_ARCH}
+    echo "Deleting plugin ${PLUGIN_IMAGE}..."
+    set +e
+    docker plugin rm "${PLUGIN_IMAGE}" 2>/dev/null
+    set -e
+}
+
+for i in $( echo "$PLATFORMS" | tr ',' ' '); do
+    delete_plugin "$i"
+done
+
+rm -rf "../prog/net-plugin/rootfs"

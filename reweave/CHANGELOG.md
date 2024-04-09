@@ -2,7 +2,18 @@
 
 All changes made to the weave net codebase during the reweave effort will be documented in this file.
 
+## 2.8.6-beta1
+
+### Changed
+
+* Changed the V2 plugin build and clean tools to build (and clean) multiple architecture-specific plugins per version, since Docker Managed Plugins are not multi-architecture capable
+* Changed the V2 plugin configuration `prog/net-plugin/config.json` to include `CHECKPOINT_DISABLE` as an option, set to `1` by default to disable latest version checking.
+* Changed the `weave` script to include `export CHECKPOINT_DISABLE=`. This will disable latest version checking for the legacy plugin as well.
+* Changed the documentation in the `website` directory as appropriate.
+
 ## 2.8.5
+
+### Changed
 
 * Changed version in `reweave/Makefile` to 2.8.5
 * Modified reweave and main CHANGELOG.md

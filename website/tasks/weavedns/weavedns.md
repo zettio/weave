@@ -28,8 +28,8 @@ resolution, and will register themselves if they either have a
 hostname in the weaveDNS domain (`weave.local` by default) or are given an explicit container name:
 
 ```
-host1$ docker run -dti --name=pingme weaveworks/ubuntu
-host1$ docker run -ti  --hostname=ubuntu.weave.local weaveworks/ubuntu
+host1$ docker run -dti --name=pingme alpine:latest
+host1$ docker run -ti  --hostname=ubuntu.weave.local alpine:latest
 root@ubuntu:/# ping pingme
 ...
 ```
@@ -37,8 +37,8 @@ root@ubuntu:/# ping pingme
 Moreover, weaveDNS always register all network aliases (--network-alias option to docker run).
 
 ```
-host1$ docker run --network weave --network-alias pingme --network-alias pingme2 -dti weaveworks/ubuntu
-host1$ docker run --network weave --hostname=ubuntu.weave.local -ti weaveworks/ubuntu
+host1$ docker run --network weave --network-alias pingme --network-alias pingme2 -dti alpine:latest
+host1$ docker run --network weave --hostname=ubuntu.weave.local -ti alpine:latest
 root@ubuntu:/# ping pingme
 ...
 root@ubuntu:/# ping pingme2

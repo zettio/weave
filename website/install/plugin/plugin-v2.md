@@ -19,7 +19,23 @@ mode and requires Docker version 1.13 or later.
 To install the plugin run the following command on _each_ host already
 participating in a Swarm cluster, i.e. on all master and worker nodes:
 
-    $ docker plugin install weaveworks/net-plugin:latest_release
+    $ docker plugin install rajchaudhuri/net-plugin:latest_release-<architecture>
+
+Here, &lt;architecture> is the processor architecture on which your Docker Engine runs. 
+It is a necessary part of the plugin name, because Docker currently does not support
+multi-architecture plugins. The Weave Net Plugin V2 is available for the following 
+architectures:
+
+* amd64
+* arm
+* arm64
+* ppc64le
+* s390x
+
+You can use the following commands to install the plugin appropriate to your architecture:
+
+    $ ARCH=$(docker version -f '{{.Server.Arch}}')
+    $ docker plugin install rajchaudhuri/net-plugin:latest_release-$ARCH
 
 Docker will pull the plugin from Docker Store, and it will ask to grant
 privileges before installing the plugin. Afterwards, it will start `weaver`
@@ -29,7 +45,7 @@ process which will try to connect to Swarm masters running Weave Net.
 
 There are several configuration parameters which can be set with:
 
-    $ docker plugin set weaveworks/net-plugin:latest_release PARAM=VALUE
+    $ docker plugin set rajchaudhuri/net-plugin:latest_release-$ARCH PARAM=VALUE
 
 The parameters include:
 
@@ -49,30 +65,37 @@ The parameters include:
 
 Before setting any parameter, the plugin has to be disabled with:
 
-    $ docker plugin disable weaveworks/net-plugin:latest_release
+    $ docker plugin disable rajchaudhuri/net-plugin:latest_release-$ARCH
 
 To re-enable the plugin run the following command:
 
-    $ docker plugin enable weaveworks/net-plugin:latest_release
+    $ docker plugin enable rajchaudhuri/net-plugin:latest_release-$ARCH
 
 ### <a name="usage"></a>Running Services or Containers Using the Plugin
 
 After you have launched the plugin, you can create a network for Docker Swarm
 services by running the following command on any Docker Swarm master node:
 
-    $ docker network create --driver=weaveworks/net-plugin:latest_release mynetwork
+    $ docker network create --driver=rajchaudhuri/net-plugin:latest_release-$ARCH mynetwork
 
 Or you can create a network for any Docker container with:
 
-    $ docker network create --driver=weaveworks/net-plugin:latest_release --attachable mynetwork
+    $ docker network create --driver=rajchaudhuri/net-plugin:latest_release-$ARCH --attachable mynetwork
 
 To start a service attached to the network run, for example:
 
     $ docker service create --network=mynetwork ...
 
-Or to start a container:
+To ensure that name resolution (service discovery) works as expected, do one of the following:
+
+* Include `--endpoint-mode=dnsrr` while creating a service. This will correctly resolve the service name to the load-balanced IP address of one of the task containers.
+* OR, include `--hostname=SOMENAME` while creating a servce. This will also resolve `SOMENAME` to the load-balanced IP address of one of the task containers.
+
+To start a container:
 
     $ docker run --network=mynetwork ...
+
+This does not require a `--hostname` option. The container name and any network aliases will correctly resolve to the container's IP address.
 
 **See Also**
 

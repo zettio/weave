@@ -9,13 +9,13 @@ When containers may not know the network to which they will be attached, Weave N
 
 To illustrate...
 
-    host1$ C=$(docker run -e WEAVE_CIDR=none -dti weaveworks/ubuntu)
+    host1$ C=$(docker run -e WEAVE_CIDR=none -dti alpine:latest)
     host1$ weave attach $C
     10.2.1.3
 
 where,
 
- *  `C=$(docker run -e WEAVE_CIDR=none -dti weaveworks/ubuntu)` starts a container and assigns its ID to a variable
+ *  `C=$(docker run -e WEAVE_CIDR=none -dti alpine:latest)` starts a container and assigns its ID to a variable
  *  `weave attach` – the Weave Net command to attach to the specified container
  *  `10.2.1.3` - the allocated IP address output by `weave attach`, in this case in the default subnet
 
@@ -25,7 +25,7 @@ If `weave attach` sees the container has a hostname with a
 domain-name, it will add those into WeaveDNS (unless you turn this off
 with the `--without-dns` argument).
 
-    host1$ docker run -dti --name=c1 --hostname=c1.weave.local weaveworks/ubuntu
+    host1$ docker run -dti --name=c1 --hostname=c1.weave.local alpine:latest
     host1$ weave attach c1
     10.32.0.1
     host1$ weave dns-lookup c1

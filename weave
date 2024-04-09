@@ -3,6 +3,9 @@ set -e
 
 [ -n "$WEAVE_DEBUG" ] && set -x
 
+# There is no longer a checkpoint service
+export CHECKPOINT_DISABLE=1
+
 # Release Version
 SCRIPT_VERSION="unreleased"
 IMAGE_VERSION=latest

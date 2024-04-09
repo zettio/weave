@@ -27,13 +27,13 @@ specified.
 
 Next, launch the two netcat containers onto the default subnet:
 
-    host1$ docker run --name a1 -ti weaveworks/ubuntu
-    host2$ docker run --name a2 -ti weaveworks/ubuntu
+    host1$ docker run --name a1 -ti alpine:latest
+    host2$ docker run --name a2 -ti alpine:latest
 
 And then to test the isolation, launch a few more containers onto a different subnet:
 
-    host1$ docker run -e WEAVE_CIDR=net:10.2.2.0/24 --name b1 -ti weaveworks/ubuntu
-    host2$ docker run -e WEAVE_CIDR=net:10.2.2.0/24 --name b2 -ti weaveworks/ubuntu
+    host1$ docker run -e WEAVE_CIDR=net:10.2.2.0/24 --name b1 -ti alpine:latest
+    host2$ docker run -e WEAVE_CIDR=net:10.2.2.0/24 --name b2 -ti alpine:latest
 
 Ping each container to confirm that they can talk to each other, but not to the containers of our first subnet:
 
@@ -55,7 +55,7 @@ Ping each container to confirm that they can talk to each other, but not to the 
 
 If required, a container can also be attached to multiple subnets when it is started using:
 
-    host1$ docker run -e WEAVE_CIDR="net:default net:10.2.2.0/24" -ti weaveworks/ubuntu
+    host1$ docker run -e WEAVE_CIDR="net:default net:10.2.2.0/24" -ti alpine:latest
 
 `net:default` is used to request the allocation of an address from the default subnet in addition to one from an explicitly specified range.
 
