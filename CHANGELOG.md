@@ -1,3 +1,12 @@
+## Release 2.8.6
+
+From this release onwards, the Docker V2 Plugin will be published for all supported architectures. It will be named using the pattern `rajchaudhuri/net-plugin:<version>-<arch>`. The latest version will also be published as `rajchaudhuri/net-plugin:latest_release-<arch>`. Supported architectures are `amd64`,`arm`,`arm64`,`ppc64le` and `s390x`. It can be installed on a Swarm-mode-enabled Docker host as follows:
+
+```bash
+ARCH=$(docker version -f '{{.Server.Arch}}')
+docker plugin install rajchaudhuri/net-plugin:latest_release-$ARCH
+```
+
 ## Release 2.8.5
 
 This release has upgraded dependencies based on CVE recommendations.

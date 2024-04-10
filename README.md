@@ -14,10 +14,10 @@ The history of the ReWeave effort can be found in [HISTORY.md](HISTORY.md).
 On a newly created Kubernetes cluster, the Weave Net CNI pluging can be installed by running the following command:
 
 ```
-kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.28/net.yaml
+kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.29/net.yaml
 ```
 
-Replace `v1.28` with the version on Kubernetes on your cluster.
+Replace `v1.29` with the version on Kubernetes on your cluster.
 
 That endpoint is provided by the companion project [weave-endpoint](https://github.com/rajch/weave-endpoint).
 

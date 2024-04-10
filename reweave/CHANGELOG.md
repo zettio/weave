@@ -2,6 +2,15 @@
 
 All changes made to the weave net codebase during the reweave effort will be documented in this file.
 
+## 2.8.6
+
+### Changed
+
+* Changed version in `reweave/Makefile` to 2.8.6
+* Modified reweave and main CHANGELOG.md
+* Modified `reweave/Makefile` to ensure that `make build-plugin` builds the plugin only for the host architecture
+* Made some documentation changes
+
 ## 2.8.6-beta1
 
 ### Changed
@@ -248,6 +257,7 @@ A new build process was created here.
 * Multi-stage Dockerfile, and a Makefile for the second stage, in `reweave/build`
 
 ### Changed
+
 * Included image building targets in Makefile directly under `reweave`
 * Changed `IMAGE_VERSION` to `2.8.2-beta0` in Makefile directly under `reweave`
 * The Alpine base image for all weave net images was set to `alpine:3.17.2` via the multi-stage Dockerfile

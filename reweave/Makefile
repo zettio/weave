@@ -1,4 +1,4 @@
-IMAGE_VERSION ?= 2.8.6-beta1
+IMAGE_VERSION ?= 2.8.6
 REGISTRY_USER ?= rajchaudhuri
 
 ALPINE_BASEIMAGE ?= alpine:3.19.1
@@ -15,6 +15,7 @@ build-images: submodule
 .PHONY: build-plugin
 build-plugin: ../prog/net-plugin/launch.sh ../prog/net-plugin/config.json
 	REGISTRY_USER=${REGISTRY_USER} IMAGE_VERSION=${IMAGE_VERSION} \
+	PLATFORMS="$$(docker version -f '{{ .Server.Arch }}')" \
 	tools/build-plugin.sh
 
 .PHONY: build

@@ -1,9 +1,9 @@
 # Vulnerability Report
 
 ```
-Report date: 2024-04-06
-Unique vulnerability count: 17
-Images version: 2.8.5
+Report date: 2024-04-10
+Unique vulnerability count: 18
+Images version: 2.8.6
 ```
 
 ## Scanner Details
@@ -23,7 +23,7 @@ Supported DB Schema: 5
 
 ## Vulnerabilities
 
-### weave-kube: (17) 
+### weave-kube: (18) 
 
 ```
 NAME           INSTALLED   FIXED-IN  TYPE  VULNERABILITY   SEVERITY 
@@ -40,6 +40,7 @@ curl           8.5.0-r0              apk   CVE-2024-2466   Unknown
 curl           8.5.0-r0              apk   CVE-2024-2398   Unknown   
 curl           8.5.0-r0              apk   CVE-2024-2004   Unknown   
 libuv          1.47.0-r0             apk   CVE-2024-24806  High      
+nghttp2-libs   1.58.0-r0             apk   CVE-2024-28182  Medium    
 ssl_client     1.36.1-r15            apk   CVE-2023-42366  Medium    
 ssl_client     1.36.1-r15            apk   CVE-2023-42365  Medium    
 ssl_client     1.36.1-r15            apk   CVE-2023-42364  Medium    
@@ -64,7 +65,7 @@ ssl_client     1.36.1-r15            apk   CVE-2023-42364  Medium
 ssl_client     1.36.1-r15            apk   CVE-2023-42363  Medium
 ```
 
-### weave: (17) 
+### weave: (18) 
 
 ```
 NAME           INSTALLED   FIXED-IN  TYPE  VULNERABILITY   SEVERITY 
@@ -81,13 +82,14 @@ curl           8.5.0-r0              apk   CVE-2024-2466   Unknown
 curl           8.5.0-r0              apk   CVE-2024-2398   Unknown   
 curl           8.5.0-r0              apk   CVE-2024-2004   Unknown   
 libuv          1.47.0-r0             apk   CVE-2024-24806  High      
+nghttp2-libs   1.58.0-r0             apk   CVE-2024-28182  Medium    
 ssl_client     1.36.1-r15            apk   CVE-2023-42366  Medium    
 ssl_client     1.36.1-r15            apk   CVE-2023-42365  Medium    
 ssl_client     1.36.1-r15            apk   CVE-2023-42364  Medium    
 ssl_client     1.36.1-r15            apk   CVE-2023-42363  Medium
 ```
 
-### weaveexec: (17) 
+### weaveexec: (18) 
 
 ```
 NAME           INSTALLED   FIXED-IN  TYPE  VULNERABILITY   SEVERITY 
@@ -104,6 +106,7 @@ curl           8.5.0-r0              apk   CVE-2024-2466   Unknown
 curl           8.5.0-r0              apk   CVE-2024-2398   Unknown   
 curl           8.5.0-r0              apk   CVE-2024-2004   Unknown   
 libuv          1.47.0-r0             apk   CVE-2024-24806  High      
+nghttp2-libs   1.58.0-r0             apk   CVE-2024-28182  Medium    
 ssl_client     1.36.1-r15            apk   CVE-2023-42366  Medium    
 ssl_client     1.36.1-r15            apk   CVE-2023-42365  Medium    
 ssl_client     1.36.1-r15            apk   CVE-2023-42364  Medium    

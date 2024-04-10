@@ -14,9 +14,9 @@ If you are here for the most popular use of Weave Net - the famous one-line inst
 You can install Weave Net on a Kubernetes cluster using:
 
 ```bash
-kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.25/net.yaml
+kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.29/net.yaml
 ```
-where the `v1.25` part can be replaced with any kubernetes version, the minimum being `v1.8`.
+where the `v1.29` part can be replaced with any Kubernetes version, the minimum being `v1.8`.
 
 If you prefer the older method using `kubectl version`, that works too:
 
@@ -32,6 +32,16 @@ kubectl apply -f https://github.com/rajch/weave/releases/latest/download/weave-d
 ```
 
 More details, and options can be found on the [Integrating Kubernetes via the Addon]({{ '/kubernetes/kube-addon' | relative_url }}) page.
+
+## Using Weave as a (legacy) Docker Plugin
+
+See [Installing Weave Net]({{ '/install/installing-weave' | relative_url }}), and then [Launching Weave Net]({{ '/install/using-weave' | relative_url }}).
+
+## Using Weave as a Docker Managed (V2) Plugin in Swarm Mode
+
+See [Integrating Docker via the Network Plugin (V2)]({{ '/install/plugin/plugin-v2' | relative_url }}).
+
+**Note:** From version 2.8.6 onwards, the Docker V2 plugin is available for amd64, arm, arm64, ppc64le and s390x architectures. Prior to this, it was only available for amd64.
 
 ## All other uses, and more
 
