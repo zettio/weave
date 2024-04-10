@@ -34,7 +34,7 @@ architectures:
 
 You can use the following commands to install the plugin appropriate to your architecture:
 
-    $ ARCH=$(docker version -f '{{.Server.Arch}}')
+{% raw %}    $ ARCH=$(docker version -f '{{.Server.Arch}}'){% endraw %}
     $ docker plugin install rajchaudhuri/net-plugin:latest_release-$ARCH
 
 Docker will pull the plugin from Docker Store, and it will ask to grant

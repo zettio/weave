@@ -115,7 +115,7 @@ and are discoverable by using standard, simple name lookups:
     host1$ docker run -ti alpine:latest
     root@7b21498fb103:/# ping service
 
-WeaveDNS also supports [load balancing]({{ '/tasks/weavedns/load-balance-fault-weavedns' | relative_url }}), [fault resilience]({{ '/tasks/weavedns/load-balance-fault-weavedns' | relative_url }}) and [hot swapping]( {{ '/tasks/weavedns/managing-entries-weavedns' | relative_url }}). 
+WeaveDNS also supports [load balancing]({{ '/tasks/weavedns/load-balance-fault-weavedns' | relative_url }}), [fault resilience]({{ '/tasks/weavedns/load-balance-fault-weavedns' | relative_url }}) and [hot swapping]({{ '/tasks/weavedns/managing-entries-weavedns' | relative_url }}). 
 
 See [Discovering Containers with WeaveDNS]({{ '/tasks/weavedns/weavedns' | relative_url }}).
  

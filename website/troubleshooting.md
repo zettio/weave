@@ -226,7 +226,7 @@ inspect`:
 Weave Net adds a template function, `json`, which can be applied to get
 results in JSON format.
 
-    $ weave report -f '{{json .DNS}}'
+{% raw %}    $ weave report -f '{{json .DNS}}'{% endraw %}
     {"Domain":"weave.local.","Upstream":["8.8.8.8","8.8.4.4"],"Address":"172.17.0.1:53","TTL":1,"Entries":null}
 
 ### <a name="list-attached-containers"></a>Listing Attached Containers
