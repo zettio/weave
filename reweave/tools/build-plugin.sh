@@ -67,6 +67,7 @@ build_plugin() {
         esac
 
         if [ -z ${IS_BETA} ]; then
+            docker plugin rm "${PLUGIN_IMAGE}" 2>/dev/null
             echo "Tagging ${PLUGIN_IMAGE} as latest_release..."
             LATEST_IMAGE=${REGISTRY_USER}/net-plugin:latest_release-${PLUGIN_ARCH}
             docker plugin create "${LATEST_IMAGE}" "${PLUGIN_PARENT_DIR}"
