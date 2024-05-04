@@ -2,6 +2,16 @@
 
 All changes made to the weave net codebase during the reweave effort will be documented in this file.
 
+## 2.8.7-beta1
+
+### Changed
+
+* Upgraded golang.org/x/net to v0.23.0, which: 
+* Upgraded golang.org/x/term to v0.18.0
+* Upgraded golang.org/x/sys to v0.18.0
+* Upgraded golang.org/x/crypto to v0.21.0
+* Ran `go mod tidy` and `go mod vendor`
+
 ## 2.8.6
 
 ### Changed
