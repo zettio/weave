@@ -1,3 +1,9 @@
+## Release 2.8.7
+
+This release has upgraded dependencies based on CVE recommendations.
+
+Also, this release does not provides images for the `ppc64le` and `s390x` architectures, because a crucial upstream dependency (libpcap-0.8, from the debian buster respository) does not provide binaries for those architectures any more.
+
 ## Release 2.8.6
 
 From this release onwards, the Docker V2 Plugin will be published for all supported architectures. It will be named using the pattern `rajchaudhuri/net-plugin:<version>-<arch>`. The latest version will also be published as `rajchaudhuri/net-plugin:latest_release-<arch>`. Supported architectures are `amd64`,`arm`,`arm64`,`ppc64le` and `s390x`. It can be installed on a Swarm-mode-enabled Docker host as follows:
