@@ -29,8 +29,8 @@ architectures:
 * amd64
 * arm
 * arm64
-* ppc64le
-* s390x
+* ~~ppc64le~~
+* ~~s390x~~
 
 You can use the following commands to install the plugin appropriate to your architecture:
 

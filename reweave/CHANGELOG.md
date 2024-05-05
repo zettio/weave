@@ -11,6 +11,7 @@ All changes made to the weave net codebase during the reweave effort will be doc
 * Upgraded golang.org/x/sys to v0.18.0
 * Upgraded golang.org/x/crypto to v0.21.0
 * Ran `go mod tidy` and `go mod vendor`
+* Removed support for ppc64le and s90x architectures, because libpcap-0.8 in the debian buster repository does not provide binaries for those architectures any more
 
 ## 2.8.6
 

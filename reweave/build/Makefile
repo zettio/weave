@@ -11,7 +11,11 @@ BUILDARCH?=amd64
 # naming platforms.
 # All supported architectures must have an "ifeq" block below that 
 # selects the corrsponding Debian platform architecture in CCARCH
-ALL_ARCHITECTURES=amd64 arm arm64 ppc64le s390x
+# Disabling support for ppc64le and s390x architectures, as the 
+# debian buster repository does not host binaries for libpcap-0.8
+# on those architectures any more.
+# ALL_ARCHITECTURES=amd64 arm arm64 ppc64le s390x
+ALL_ARCHITECTURES=amd64 arm arm64
 
 # We need the Debian platform architecture format, for
 # crosscompilation
@@ -24,12 +28,12 @@ endif
 ifeq ($(ARCH),arm64)
 	CCARCH=aarch64-linux-gnu
 endif
-ifeq ($(ARCH),ppc64le)
-	CCARCH=powerpc64le-linux-gnu
-endif
-ifeq ($(ARCH),s390x)
-	CCARCH=s390x-linux-gnu
-endif
+# ifeq ($(ARCH),ppc64le)
+# 	CCARCH=powerpc64le-linux-gnu
+# endif
+# ifeq ($(ARCH),s390x)
+# 	CCARCH=s390x-linux-gnu
+# endif
 
 # Set the architecture-specific C compiler and library
 # load path.

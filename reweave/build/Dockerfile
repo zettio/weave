@@ -14,12 +14,19 @@ ENV GOARM 7
 
 # The names of the architectures that we fetch cross-compilers for
 # from the Debian packages.
+# Disabling support for ppc64el and s390x architectures, as the 
+# debian buster repository does not host binaries for libpcap-0.8
+# on those architectures any more.
+# ENV DEB_CROSSPLATFORMS \
+#       amd64 \
+# 	armhf \
+# 	arm64 \
+# 	ppc64el \
+# 	s390x
 ENV DEB_CROSSPLATFORMS \
       amd64 \
 	armhf \
-	arm64 \
-	ppc64el \
-	s390x
+	arm64
 
 # Install the build-essential and crossbuild-essential-ARCH packages
 RUN <<EOCROSSCOMPILERS

@@ -41,7 +41,7 @@ See [Installing Weave Net]({{ '/install/installing-weave' | relative_url }}), an
 
 See [Integrating Docker via the Network Plugin (V2)]({{ '/install/plugin/plugin-v2' | relative_url }}).
 
-**Note:** From version 2.8.6 onwards, the Docker V2 plugin is available for amd64, arm, arm64, ppc64le and s390x architectures. Prior to this, it was only available for amd64.
+**Note:** From version 2.8.6 onwards, the Docker V2 plugin is available for amd64, arm, arm64 ~~, ppc64le and s390x~~ architectures. Prior to this, it was only available for amd64.
 
 ## All other uses, and more
 
