@@ -2,6 +2,12 @@
 
 All changes made to the weave net codebase during the reweave effort will be documented in this file.
 
+## 2.8.8-beta1
+
+### Changed
+
+* Alpine base image upgraded to alpine:3.20.0 in `reweave/Makefile`
+
 ## 2.8.7
 
 ### Changed

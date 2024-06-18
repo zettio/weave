@@ -2,8 +2,8 @@
 
 ```
 Report date: 2024-06-18
-Unique vulnerability count: 24
-Images version: 2.8.7
+Unique vulnerability count: 4
+Images version: 2.8.8-beta1
 ```
 
 ## Scanner Details
@@ -23,116 +23,43 @@ Supported DB Schema: 5
 
 ## Vulnerabilities
 
-### weave-kube: (24) 
+### weave-kube: (4) 
 
 ```
-NAME           INSTALLED   FIXED-IN    TYPE       VULNERABILITY   SEVERITY 
-busybox        1.36.1-r15  1.36.1-r16  apk        CVE-2023-42366  Medium    
-busybox        1.36.1-r15  1.36.1-r19  apk        CVE-2023-42365  Medium    
-busybox        1.36.1-r15  1.36.1-r19  apk        CVE-2023-42364  Medium    
-busybox        1.36.1-r15  1.36.1-r17  apk        CVE-2023-42363  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r16  apk        CVE-2023-42366  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r19  apk        CVE-2023-42365  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r19  apk        CVE-2023-42364  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r17  apk        CVE-2023-42363  Medium    
-curl           8.5.0-r0                apk        CVE-2024-0853   Medium    
-curl           8.5.0-r0                apk        CVE-2024-2466   Unknown   
-curl           8.5.0-r0                apk        CVE-2024-2398   Unknown   
-curl           8.5.0-r0                apk        CVE-2024-2004   Unknown   
-libcrypto3     3.1.4-r6    3.1.5-r0    apk        CVE-2024-4603   Unknown   
-libssl3        3.1.4-r6    3.1.5-r0    apk        CVE-2024-4603   Unknown   
-libuv          1.47.0-r0               apk        CVE-2024-24806  High      
-libxml2        2.11.7-r0   2.11.8-r0   apk        CVE-2024-34459  Unknown   
-nghttp2-libs   1.58.0-r0               apk        CVE-2024-28182  Medium    
-ssl_client     1.36.1-r15  1.36.1-r16  apk        CVE-2023-42366  Medium    
-ssl_client     1.36.1-r15  1.36.1-r19  apk        CVE-2023-42365  Medium    
-ssl_client     1.36.1-r15  1.36.1-r19  apk        CVE-2023-42364  Medium    
-ssl_client     1.36.1-r15  1.36.1-r17  apk        CVE-2023-42363  Medium    
-stdlib         go1.21.9                go-module  CVE-2024-24790  Unknown   
-stdlib         go1.21.9                go-module  CVE-2024-24789  Unknown   
-stdlib         go1.21.9                go-module  CVE-2024-24787  Unknown
+NAME    INSTALLED  FIXED-IN  TYPE       VULNERABILITY   SEVERITY 
+stdlib  go1.22.2             go-module  CVE-2024-24790  Unknown   
+stdlib  go1.22.2             go-module  CVE-2024-24789  Unknown   
+stdlib  go1.22.2             go-module  CVE-2024-24788  Unknown   
+stdlib  go1.22.2             go-module  CVE-2024-24787  Unknown
 ```
 
-### weave-npc: (17) 
+### weave-npc: (4) 
 
 ```
-NAME           INSTALLED   FIXED-IN    TYPE       VULNERABILITY   SEVERITY 
-busybox        1.36.1-r15  1.36.1-r16  apk        CVE-2023-42366  Medium    
-busybox        1.36.1-r15  1.36.1-r19  apk        CVE-2023-42365  Medium    
-busybox        1.36.1-r15  1.36.1-r19  apk        CVE-2023-42364  Medium    
-busybox        1.36.1-r15  1.36.1-r17  apk        CVE-2023-42363  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r16  apk        CVE-2023-42366  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r19  apk        CVE-2023-42365  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r19  apk        CVE-2023-42364  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r17  apk        CVE-2023-42363  Medium    
-libcrypto3     3.1.4-r6    3.1.5-r0    apk        CVE-2024-4603   Unknown   
-libssl3        3.1.4-r6    3.1.5-r0    apk        CVE-2024-4603   Unknown   
-ssl_client     1.36.1-r15  1.36.1-r16  apk        CVE-2023-42366  Medium    
-ssl_client     1.36.1-r15  1.36.1-r19  apk        CVE-2023-42365  Medium    
-ssl_client     1.36.1-r15  1.36.1-r19  apk        CVE-2023-42364  Medium    
-ssl_client     1.36.1-r15  1.36.1-r17  apk        CVE-2023-42363  Medium    
-stdlib         go1.21.9                go-module  CVE-2024-24790  Unknown   
-stdlib         go1.21.9                go-module  CVE-2024-24789  Unknown   
-stdlib         go1.21.9                go-module  CVE-2024-24787  Unknown
+NAME    INSTALLED  FIXED-IN  TYPE       VULNERABILITY   SEVERITY 
+stdlib  go1.22.2             go-module  CVE-2024-24790  Unknown   
+stdlib  go1.22.2             go-module  CVE-2024-24789  Unknown   
+stdlib  go1.22.2             go-module  CVE-2024-24788  Unknown   
+stdlib  go1.22.2             go-module  CVE-2024-24787  Unknown
 ```
 
-### weave: (24) 
+### weave: (4) 
 
 ```
-NAME           INSTALLED   FIXED-IN    TYPE       VULNERABILITY   SEVERITY 
-busybox        1.36.1-r15  1.36.1-r16  apk        CVE-2023-42366  Medium    
-busybox        1.36.1-r15  1.36.1-r19  apk        CVE-2023-42365  Medium    
-busybox        1.36.1-r15  1.36.1-r19  apk        CVE-2023-42364  Medium    
-busybox        1.36.1-r15  1.36.1-r17  apk        CVE-2023-42363  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r16  apk        CVE-2023-42366  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r19  apk        CVE-2023-42365  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r19  apk        CVE-2023-42364  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r17  apk        CVE-2023-42363  Medium    
-curl           8.5.0-r0                apk        CVE-2024-0853   Medium    
-curl           8.5.0-r0                apk        CVE-2024-2466   Unknown   
-curl           8.5.0-r0                apk        CVE-2024-2398   Unknown   
-curl           8.5.0-r0                apk        CVE-2024-2004   Unknown   
-libcrypto3     3.1.4-r6    3.1.5-r0    apk        CVE-2024-4603   Unknown   
-libssl3        3.1.4-r6    3.1.5-r0    apk        CVE-2024-4603   Unknown   
-libuv          1.47.0-r0               apk        CVE-2024-24806  High      
-libxml2        2.11.7-r0   2.11.8-r0   apk        CVE-2024-34459  Unknown   
-nghttp2-libs   1.58.0-r0               apk        CVE-2024-28182  Medium    
-ssl_client     1.36.1-r15  1.36.1-r16  apk        CVE-2023-42366  Medium    
-ssl_client     1.36.1-r15  1.36.1-r19  apk        CVE-2023-42365  Medium    
-ssl_client     1.36.1-r15  1.36.1-r19  apk        CVE-2023-42364  Medium    
-ssl_client     1.36.1-r15  1.36.1-r17  apk        CVE-2023-42363  Medium    
-stdlib         go1.21.9                go-module  CVE-2024-24790  Unknown   
-stdlib         go1.21.9                go-module  CVE-2024-24789  Unknown   
-stdlib         go1.21.9                go-module  CVE-2024-24787  Unknown
+NAME    INSTALLED  FIXED-IN  TYPE       VULNERABILITY   SEVERITY 
+stdlib  go1.22.2             go-module  CVE-2024-24790  Unknown   
+stdlib  go1.22.2             go-module  CVE-2024-24789  Unknown   
+stdlib  go1.22.2             go-module  CVE-2024-24788  Unknown   
+stdlib  go1.22.2             go-module  CVE-2024-24787  Unknown
 ```
 
-### weaveexec: (24) 
+### weaveexec: (4) 
 
 ```
-NAME           INSTALLED   FIXED-IN    TYPE       VULNERABILITY   SEVERITY 
-busybox        1.36.1-r15  1.36.1-r16  apk        CVE-2023-42366  Medium    
-busybox        1.36.1-r15  1.36.1-r19  apk        CVE-2023-42365  Medium    
-busybox        1.36.1-r15  1.36.1-r19  apk        CVE-2023-42364  Medium    
-busybox        1.36.1-r15  1.36.1-r17  apk        CVE-2023-42363  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r16  apk        CVE-2023-42366  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r19  apk        CVE-2023-42365  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r19  apk        CVE-2023-42364  Medium    
-busybox-binsh  1.36.1-r15  1.36.1-r17  apk        CVE-2023-42363  Medium    
-curl           8.5.0-r0                apk        CVE-2024-0853   Medium    
-curl           8.5.0-r0                apk        CVE-2024-2466   Unknown   
-curl           8.5.0-r0                apk        CVE-2024-2398   Unknown   
-curl           8.5.0-r0                apk        CVE-2024-2004   Unknown   
-libcrypto3     3.1.4-r6    3.1.5-r0    apk        CVE-2024-4603   Unknown   
-libssl3        3.1.4-r6    3.1.5-r0    apk        CVE-2024-4603   Unknown   
-libuv          1.47.0-r0               apk        CVE-2024-24806  High      
-libxml2        2.11.7-r0   2.11.8-r0   apk        CVE-2024-34459  Unknown   
-nghttp2-libs   1.58.0-r0               apk        CVE-2024-28182  Medium    
-ssl_client     1.36.1-r15  1.36.1-r16  apk        CVE-2023-42366  Medium    
-ssl_client     1.36.1-r15  1.36.1-r19  apk        CVE-2023-42365  Medium    
-ssl_client     1.36.1-r15  1.36.1-r19  apk        CVE-2023-42364  Medium    
-ssl_client     1.36.1-r15  1.36.1-r17  apk        CVE-2023-42363  Medium    
-stdlib         go1.21.9                go-module  CVE-2024-24790  Unknown   
-stdlib         go1.21.9                go-module  CVE-2024-24789  Unknown   
-stdlib         go1.21.9                go-module  CVE-2024-24787  Unknown
+NAME    INSTALLED  FIXED-IN  TYPE       VULNERABILITY   SEVERITY 
+stdlib  go1.22.2             go-module  CVE-2024-24790  Unknown   
+stdlib  go1.22.2             go-module  CVE-2024-24789  Unknown   
+stdlib  go1.22.2             go-module  CVE-2024-24788  Unknown   
+stdlib  go1.22.2             go-module  CVE-2024-24787  Unknown
 ```
 
