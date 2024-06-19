@@ -1,3 +1,7 @@
+## Release 2.8.8
+
+The alpine base image used by `weave-kube` and `weave-npc` has been upgraded to version 3.20.0 in this release. This removes several CVEs.
+
 ## Release 2.8.7
 
 This release has upgraded dependencies based on CVE recommendations.

@@ -2,6 +2,11 @@
 
 All changes made to the weave net codebase during the reweave effort will be documented in this file.
 
+## 2.8.8
+
+* Changed version in `reweave/Makefile` to 2.8.8
+* Modified reweave and main CHANGELOG.md
+
 ## 2.8.8-beta1
 
 ### Changed
