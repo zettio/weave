@@ -1,4 +1,4 @@
-# ReWeave - an effort to keep Weave Net alive
+# Weave Net
 
 This repository contains a fork of Weave Net, the first product developed by Weaveworks. Since Weaveworks has shut down, this repo aims to continue maintaining Weave Net, and to publish releases regularly.
 
@@ -7,7 +7,7 @@ This repository contains a fork of Weave Net, the first product developed by Wea
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/rajch/weave?include_prereleases)](https://github.com/rajch/weave/releases)
 [![Unique CVE count in all images](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Frajch%2Fweave%2Fmaster%2Freweave%2Fscans%2Fbadge.json&label=CVE%20count "The number of unique CVEs reported by scanning all images")](reweave/scans/report.md)
 
-The history of the ReWeave effort can be found in [HISTORY.md](HISTORY.md).
+The history of the fork can be found in [HISTORY.md](HISTORY.md).
 
 ## Using Weave Net on Kubernetes
 
