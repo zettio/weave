@@ -1,6 +1,13 @@
 # Changelog
 
-All changes made to the weave net codebase during the reweave effort will be documented in this file.
+All changes made to the weave net codebase since the fork will be documented in this file.
+
+## 2.8.9
+
+### Changed
+
+* Changed version in `reweave/Makefile` to 2.8.9
+* Modified reweave and main CHANGELOG.md
 
 ## 2.8.9-beta1
 

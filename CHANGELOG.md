@@ -1,3 +1,7 @@
+## Release 2.8.9
+
+This release bumps the Go version to 1.22.2, the alpine base image to version 3.20.2, and upgrades a dependency as per CVE recommendations.
+
 ## Release 2.8.8
 
 The alpine base image used by `weave-kube` and `weave-npc` has been upgraded to version 3.20.0 in this release. This removes several CVEs.
