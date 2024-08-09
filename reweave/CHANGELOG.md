@@ -2,6 +2,15 @@
 
 All changes made to the weave net codebase during the reweave effort will be documented in this file.
 
+## 2.8.9-beta1
+
+### Changed
+
+* Changed go base image in `reweave/build/Dockerfile` to `golang:1.22.2-bullseye`.
+* Changed the Alpine base image in `reweave/Makefile` and `reweave/build/Dockerfile` to `alpine:3.20.2`
+* Upgraded github.com/docker/docker to v25.0.6+incompatible
+* Ran `go mod tidy` and `go mod vendor`
+
 ## 2.8.8
 
 * Changed version in `reweave/Makefile` to 2.8.8

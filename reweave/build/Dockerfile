@@ -1,13 +1,13 @@
 # syntax=docker/dockerfile:1
-ARG ALPINE_BASEIMAGE=alpine:3.19.1
+ARG ALPINE_BASEIMAGE=alpine:3.20.2
 
 ########
-# Stage 1: go 1.20 on debian bullseye
+# Stage 1: go 1.22.2 on debian bullseye
 # This installs cross-compilation tools for supported architectures.
 # It will be built only once for a given build platform. Subsequent
 # stages will start from this and cross-compile for each target
 # architecture.
-FROM --platform=${BUILDPLATFORM} golang:1.21.9-bullseye AS builderbase
+FROM --platform=${BUILDPLATFORM} golang:1.22.2-bullseye AS builderbase
 
 # Support Raspberry Pi 2 and newer
 ENV GOARM 7
