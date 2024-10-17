@@ -1,7 +1,7 @@
 # Vulnerability Report
 
 ```
-Report date: 2024-10-16
+Report date: 2024-10-17
 Unique vulnerability count: 16
 Images version: 2.8.10-beta1
 ```
@@ -26,80 +26,80 @@ Supported DB Schema: 5
 ### weave-kube: (16) 
 
 ```
-NAME        INSTALLED   FIXED-IN  TYPE       VULNERABILITY   SEVERITY 
-bind-libs   9.18.27-r0            apk        CVE-2024-4076   High      
-bind-libs   9.18.27-r0            apk        CVE-2024-1975   High      
-bind-libs   9.18.27-r0            apk        CVE-2024-1737   High      
-bind-libs   9.18.27-r0            apk        CVE-2024-0760   High      
-bind-tools  9.18.27-r0            apk        CVE-2024-4076   High      
-bind-tools  9.18.27-r0            apk        CVE-2024-1975   High      
-bind-tools  9.18.27-r0            apk        CVE-2024-1737   High      
-bind-tools  9.18.27-r0            apk        CVE-2024-0760   High      
-stdlib      go1.22.2              go-module  CVE-2024-24790  Critical  
-stdlib      go1.22.2              go-module  CVE-2024-34158  High      
-stdlib      go1.22.2              go-module  CVE-2024-34156  High      
-stdlib      go1.22.2              go-module  CVE-2024-24791  High      
-stdlib      go1.22.2              go-module  CVE-2024-24789  Medium    
-stdlib      go1.22.2              go-module  CVE-2024-24787  Medium    
-stdlib      go1.22.2              go-module  CVE-2024-34155  Unknown   
-stdlib      go1.22.2              go-module  CVE-2024-24788  Unknown
+NAME        INSTALLED   FIXED-IN         TYPE       VULNERABILITY   SEVERITY 
+bind-libs   9.18.27-r0                   apk        CVE-2024-4076   High      
+bind-libs   9.18.27-r0                   apk        CVE-2024-1975   High      
+bind-libs   9.18.27-r0                   apk        CVE-2024-1737   High      
+bind-libs   9.18.27-r0                   apk        CVE-2024-0760   High      
+bind-tools  9.18.27-r0                   apk        CVE-2024-4076   High      
+bind-tools  9.18.27-r0                   apk        CVE-2024-1975   High      
+bind-tools  9.18.27-r0                   apk        CVE-2024-1737   High      
+bind-tools  9.18.27-r0                   apk        CVE-2024-0760   High      
+stdlib      go1.22.2    1.21.11, 1.22.4  go-module  CVE-2024-24790  Critical  
+stdlib      go1.22.2    1.22.7, 1.23.1   go-module  CVE-2024-34158  High      
+stdlib      go1.22.2    1.22.7, 1.23.1   go-module  CVE-2024-34156  High      
+stdlib      go1.22.2    1.21.12, 1.22.5  go-module  CVE-2024-24791  High      
+stdlib      go1.22.2    1.21.11, 1.22.4  go-module  CVE-2024-24789  Medium    
+stdlib      go1.22.2    1.21.10, 1.22.3  go-module  CVE-2024-24787  Medium    
+stdlib      go1.22.2    1.22.7, 1.23.1   go-module  CVE-2024-34155  Unknown   
+stdlib      go1.22.2    1.22.3           go-module  CVE-2024-24788  Unknown
 ```
 
 ### weave-npc: (8) 
 
 ```
-NAME    INSTALLED  FIXED-IN  TYPE       VULNERABILITY   SEVERITY 
-stdlib  go1.22.2             go-module  CVE-2024-24790  Critical  
-stdlib  go1.22.2             go-module  CVE-2024-34158  High      
-stdlib  go1.22.2             go-module  CVE-2024-34156  High      
-stdlib  go1.22.2             go-module  CVE-2024-24791  High      
-stdlib  go1.22.2             go-module  CVE-2024-24789  Medium    
-stdlib  go1.22.2             go-module  CVE-2024-24787  Medium    
-stdlib  go1.22.2             go-module  CVE-2024-34155  Unknown   
-stdlib  go1.22.2             go-module  CVE-2024-24788  Unknown
+NAME    INSTALLED  FIXED-IN         TYPE       VULNERABILITY   SEVERITY 
+stdlib  go1.22.2   1.21.11, 1.22.4  go-module  CVE-2024-24790  Critical  
+stdlib  go1.22.2   1.22.7, 1.23.1   go-module  CVE-2024-34158  High      
+stdlib  go1.22.2   1.22.7, 1.23.1   go-module  CVE-2024-34156  High      
+stdlib  go1.22.2   1.21.12, 1.22.5  go-module  CVE-2024-24791  High      
+stdlib  go1.22.2   1.21.11, 1.22.4  go-module  CVE-2024-24789  Medium    
+stdlib  go1.22.2   1.21.10, 1.22.3  go-module  CVE-2024-24787  Medium    
+stdlib  go1.22.2   1.22.7, 1.23.1   go-module  CVE-2024-34155  Unknown   
+stdlib  go1.22.2   1.22.3           go-module  CVE-2024-24788  Unknown
 ```
 
 ### weave: (16) 
 
 ```
-NAME        INSTALLED   FIXED-IN  TYPE       VULNERABILITY   SEVERITY 
-bind-libs   9.18.27-r0            apk        CVE-2024-4076   High      
-bind-libs   9.18.27-r0            apk        CVE-2024-1975   High      
-bind-libs   9.18.27-r0            apk        CVE-2024-1737   High      
-bind-libs   9.18.27-r0            apk        CVE-2024-0760   High      
-bind-tools  9.18.27-r0            apk        CVE-2024-4076   High      
-bind-tools  9.18.27-r0            apk        CVE-2024-1975   High      
-bind-tools  9.18.27-r0            apk        CVE-2024-1737   High      
-bind-tools  9.18.27-r0            apk        CVE-2024-0760   High      
-stdlib      go1.22.2              go-module  CVE-2024-24790  Critical  
-stdlib      go1.22.2              go-module  CVE-2024-34158  High      
-stdlib      go1.22.2              go-module  CVE-2024-34156  High      
-stdlib      go1.22.2              go-module  CVE-2024-24791  High      
-stdlib      go1.22.2              go-module  CVE-2024-24789  Medium    
-stdlib      go1.22.2              go-module  CVE-2024-24787  Medium    
-stdlib      go1.22.2              go-module  CVE-2024-34155  Unknown   
-stdlib      go1.22.2              go-module  CVE-2024-24788  Unknown
+NAME        INSTALLED   FIXED-IN         TYPE       VULNERABILITY   SEVERITY 
+bind-libs   9.18.27-r0                   apk        CVE-2024-4076   High      
+bind-libs   9.18.27-r0                   apk        CVE-2024-1975   High      
+bind-libs   9.18.27-r0                   apk        CVE-2024-1737   High      
+bind-libs   9.18.27-r0                   apk        CVE-2024-0760   High      
+bind-tools  9.18.27-r0                   apk        CVE-2024-4076   High      
+bind-tools  9.18.27-r0                   apk        CVE-2024-1975   High      
+bind-tools  9.18.27-r0                   apk        CVE-2024-1737   High      
+bind-tools  9.18.27-r0                   apk        CVE-2024-0760   High      
+stdlib      go1.22.2    1.21.11, 1.22.4  go-module  CVE-2024-24790  Critical  
+stdlib      go1.22.2    1.22.7, 1.23.1   go-module  CVE-2024-34158  High      
+stdlib      go1.22.2    1.22.7, 1.23.1   go-module  CVE-2024-34156  High      
+stdlib      go1.22.2    1.21.12, 1.22.5  go-module  CVE-2024-24791  High      
+stdlib      go1.22.2    1.21.11, 1.22.4  go-module  CVE-2024-24789  Medium    
+stdlib      go1.22.2    1.21.10, 1.22.3  go-module  CVE-2024-24787  Medium    
+stdlib      go1.22.2    1.22.7, 1.23.1   go-module  CVE-2024-34155  Unknown   
+stdlib      go1.22.2    1.22.3           go-module  CVE-2024-24788  Unknown
 ```
 
 ### weaveexec: (16) 
 
 ```
-NAME        INSTALLED   FIXED-IN  TYPE       VULNERABILITY   SEVERITY 
-bind-libs   9.18.27-r0            apk        CVE-2024-4076   High      
-bind-libs   9.18.27-r0            apk        CVE-2024-1975   High      
-bind-libs   9.18.27-r0            apk        CVE-2024-1737   High      
-bind-libs   9.18.27-r0            apk        CVE-2024-0760   High      
-bind-tools  9.18.27-r0            apk        CVE-2024-4076   High      
-bind-tools  9.18.27-r0            apk        CVE-2024-1975   High      
-bind-tools  9.18.27-r0            apk        CVE-2024-1737   High      
-bind-tools  9.18.27-r0            apk        CVE-2024-0760   High      
-stdlib      go1.22.2              go-module  CVE-2024-24790  Critical  
-stdlib      go1.22.2              go-module  CVE-2024-34158  High      
-stdlib      go1.22.2              go-module  CVE-2024-34156  High      
-stdlib      go1.22.2              go-module  CVE-2024-24791  High      
-stdlib      go1.22.2              go-module  CVE-2024-24789  Medium    
-stdlib      go1.22.2              go-module  CVE-2024-24787  Medium    
-stdlib      go1.22.2              go-module  CVE-2024-34155  Unknown   
-stdlib      go1.22.2              go-module  CVE-2024-24788  Unknown
+NAME        INSTALLED   FIXED-IN         TYPE       VULNERABILITY   SEVERITY 
+bind-libs   9.18.27-r0                   apk        CVE-2024-4076   High      
+bind-libs   9.18.27-r0                   apk        CVE-2024-1975   High      
+bind-libs   9.18.27-r0                   apk        CVE-2024-1737   High      
+bind-libs   9.18.27-r0                   apk        CVE-2024-0760   High      
+bind-tools  9.18.27-r0                   apk        CVE-2024-4076   High      
+bind-tools  9.18.27-r0                   apk        CVE-2024-1975   High      
+bind-tools  9.18.27-r0                   apk        CVE-2024-1737   High      
+bind-tools  9.18.27-r0                   apk        CVE-2024-0760   High      
+stdlib      go1.22.2    1.21.11, 1.22.4  go-module  CVE-2024-24790  Critical  
+stdlib      go1.22.2    1.22.7, 1.23.1   go-module  CVE-2024-34158  High      
+stdlib      go1.22.2    1.22.7, 1.23.1   go-module  CVE-2024-34156  High      
+stdlib      go1.22.2    1.21.12, 1.22.5  go-module  CVE-2024-24791  High      
+stdlib      go1.22.2    1.21.11, 1.22.4  go-module  CVE-2024-24789  Medium    
+stdlib      go1.22.2    1.21.10, 1.22.3  go-module  CVE-2024-24787  Medium    
+stdlib      go1.22.2    1.22.7, 1.23.1   go-module  CVE-2024-34155  Unknown   
+stdlib      go1.22.2    1.22.3           go-module  CVE-2024-24788  Unknown
 ```
 
