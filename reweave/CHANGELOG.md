@@ -2,6 +2,12 @@
 
 All changes made to the weave net codebase since the fork will be documented in this file.
 
+## 2.8.10-beta1
+
+### Changed
+
+* Changed the Alpine base image in `reweave/Makefile` and `reweave/build/Dockerfile` to `alpine:3.20.3`
+
 ## 2.8.9
 
 ### Changed

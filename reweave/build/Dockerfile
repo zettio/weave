@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-ARG ALPINE_BASEIMAGE=alpine:3.20.2
+ARG ALPINE_BASEIMAGE=alpine:3.20.3
 
 ########
 # Stage 1: go 1.22.2 on debian bullseye
