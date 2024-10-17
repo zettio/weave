@@ -3,7 +3,7 @@
 ```
 Report date: 2024-10-17
 Unique vulnerability count: 8
-Images version: 2.8.10-beta2
+Images version: 2.8.10
 ```
 
 ## Scanner Details

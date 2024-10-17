@@ -1,3 +1,7 @@
+## Release 2.8.10
+
+This release bumps the Go version to 1.23.1 and the alpine base image to version 3.20.3 as per CVE recommendations.
+
 ## Release 2.8.9
 
 This release bumps the Go version to 1.22.2, the alpine base image to version 3.20.2, and upgrades a dependency as per CVE recommendations.

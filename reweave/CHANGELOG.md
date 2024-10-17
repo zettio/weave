@@ -2,6 +2,13 @@
 
 All changes made to the weave net codebase since the fork will be documented in this file.
 
+## 2.8.10
+
+### Changed
+
+* Changed version in `reweave/Makefile` to 2.8.10
+* Modified reweave and main CHANGELOG.md
+
 ## 2.8.10-beta2
 
 ### Changed
