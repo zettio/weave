@@ -2,6 +2,14 @@
 
 All changes made to the weave net codebase since the fork will be documented in this file.
 
+## 2.8.10-beta2
+
+### Changed
+
+* Changed go version in `go.mod` to 1.23.1
+* Changed go base image in `reweave/build/Dockerfile` to `golang:1.23.1-bullseye`.
+
+
 ## 2.8.10-beta1
 
 ### Changed
