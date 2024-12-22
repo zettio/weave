@@ -1,8 +1,8 @@
 # Vulnerability Report
 
 ```
-Report date: 2024-10-17
-Unique vulnerability count: 8
+Report date: 2024-12-22
+Unique vulnerability count: 2
 Images version: 2.8.10
 ```
 
@@ -10,64 +10,48 @@ Images version: 2.8.10
 
 ```
 Application:         grype
-Version:             0.82.1
-BuildDate:           2024-10-15T13:54:04Z
-GitCommit:           50815e59c973cfd0c0247cbc2af00fa37f7cda5d
-GitDescription:      v0.82.1
+Version:             0.86.1
+BuildDate:           2024-12-13T19:32:52Z
+GitCommit:           5c4fee7b1170976ab435de052fc3611bc955f1f1
+GitDescription:      v0.86.1
 Platform:            linux/amd64
-GoVersion:           go1.23.2
+GoVersion:           go1.23.4
 Compiler:            gc
-Syft Version:        v1.14.1
+Syft Version:        v1.18.1
 Supported DB Schema: 5
 ```
 
 ## Vulnerabilities
 
-### weave-kube: (8) 
+### weave-kube: (2) 
 
 ```
-NAME        INSTALLED   FIXED-IN  TYPE  VULNERABILITY  SEVERITY 
-bind-libs   9.18.27-r0            apk   CVE-2024-4076  High      
-bind-libs   9.18.27-r0            apk   CVE-2024-1975  High      
-bind-libs   9.18.27-r0            apk   CVE-2024-1737  High      
-bind-libs   9.18.27-r0            apk   CVE-2024-0760  High      
-bind-tools  9.18.27-r0            apk   CVE-2024-4076  High      
-bind-tools  9.18.27-r0            apk   CVE-2024-1975  High      
-bind-tools  9.18.27-r0            apk   CVE-2024-1737  High      
-bind-tools  9.18.27-r0            apk   CVE-2024-0760  High
+NAME                 INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
+golang.org/x/crypto  v0.21.0    0.31.0    go-module  GHSA-v778-237x-gjrc  Critical  
+golang.org/x/net     v0.23.0    0.33.0    go-module  GHSA-w32m-9786-jp63  High
 ```
 
-### weave-npc: (0) 
+### weave-npc: (2) 
 
 ```
-No vulnerabilities found
+NAME                 INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
+golang.org/x/crypto  v0.21.0    0.31.0    go-module  GHSA-v778-237x-gjrc  Critical  
+golang.org/x/net     v0.23.0    0.33.0    go-module  GHSA-w32m-9786-jp63  High
 ```
 
-### weave: (8) 
+### weave: (2) 
 
 ```
-NAME        INSTALLED   FIXED-IN  TYPE  VULNERABILITY  SEVERITY 
-bind-libs   9.18.27-r0            apk   CVE-2024-4076  High      
-bind-libs   9.18.27-r0            apk   CVE-2024-1975  High      
-bind-libs   9.18.27-r0            apk   CVE-2024-1737  High      
-bind-libs   9.18.27-r0            apk   CVE-2024-0760  High      
-bind-tools  9.18.27-r0            apk   CVE-2024-4076  High      
-bind-tools  9.18.27-r0            apk   CVE-2024-1975  High      
-bind-tools  9.18.27-r0            apk   CVE-2024-1737  High      
-bind-tools  9.18.27-r0            apk   CVE-2024-0760  High
+NAME                 INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
+golang.org/x/crypto  v0.21.0    0.31.0    go-module  GHSA-v778-237x-gjrc  Critical  
+golang.org/x/net     v0.23.0    0.33.0    go-module  GHSA-w32m-9786-jp63  High
 ```
 
-### weaveexec: (8) 
+### weaveexec: (2) 
 
 ```
-NAME        INSTALLED   FIXED-IN  TYPE  VULNERABILITY  SEVERITY 
-bind-libs   9.18.27-r0            apk   CVE-2024-4076  High      
-bind-libs   9.18.27-r0            apk   CVE-2024-1975  High      
-bind-libs   9.18.27-r0            apk   CVE-2024-1737  High      
-bind-libs   9.18.27-r0            apk   CVE-2024-0760  High      
-bind-tools  9.18.27-r0            apk   CVE-2024-4076  High      
-bind-tools  9.18.27-r0            apk   CVE-2024-1975  High      
-bind-tools  9.18.27-r0            apk   CVE-2024-1737  High      
-bind-tools  9.18.27-r0            apk   CVE-2024-0760  High
+NAME                 INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
+golang.org/x/crypto  v0.21.0    0.31.0    go-module  GHSA-v778-237x-gjrc  Critical  
+golang.org/x/net     v0.23.0    0.33.0    go-module  GHSA-w32m-9786-jp63  High
 ```
 
