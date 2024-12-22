@@ -2,6 +2,13 @@
 
 All changes made to the weave net codebase since the fork will be documented in this file.
 
+## 2.9.0
+
+### Changed
+
+* Changed version in `reweave/Makefile` to 2.9.0
+* Modified reweave and main CHANGELOG.md
+
 ## 2.9.0-beta1
 
 From this version onwards, we will assume that the default backend for `iptables` is `iptables-nft`. For backward compatibility, we will include `iptables-legacy` in the weave images, and provide a way to use that if required.

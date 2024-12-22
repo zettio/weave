@@ -1,3 +1,9 @@
+## Release 2.9.0
+
+This release has upgraded dependencies based on CVE recommendations.
+
+Also, from this release onwards, all weave images will use the `iptables-nft` backend for `iptables` by default. To use the legacy mode, set the environment variable `IPTABLES_BACKEND` to `legacy`. To do this for the Docker plugin, export the variable before using the `weave` script. For the Kubernetes addon, set the variable in the manifest.
+
 ## Release 2.8.10
 
 This release bumps the Go version to 1.23.1 and the alpine base image to version 3.20.3 as per CVE recommendations.

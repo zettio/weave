@@ -2,8 +2,8 @@
 
 ```
 Report date: 2024-12-22
-Unique vulnerability count: 2
-Images version: 2.8.10
+Unique vulnerability count: 0
+Images version: 2.9.0
 ```
 
 ## Scanner Details
@@ -23,35 +23,27 @@ Supported DB Schema: 5
 
 ## Vulnerabilities
 
-### weave-kube: (2) 
+### weave-kube: (0) 
 
 ```
-NAME                 INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
-golang.org/x/crypto  v0.21.0    0.31.0    go-module  GHSA-v778-237x-gjrc  Critical  
-golang.org/x/net     v0.23.0    0.33.0    go-module  GHSA-w32m-9786-jp63  High
+No vulnerabilities found
 ```
 
-### weave-npc: (2) 
+### weave-npc: (0) 
 
 ```
-NAME                 INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
-golang.org/x/crypto  v0.21.0    0.31.0    go-module  GHSA-v778-237x-gjrc  Critical  
-golang.org/x/net     v0.23.0    0.33.0    go-module  GHSA-w32m-9786-jp63  High
+No vulnerabilities found
 ```
 
-### weave: (2) 
+### weave: (0) 
 
 ```
-NAME                 INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
-golang.org/x/crypto  v0.21.0    0.31.0    go-module  GHSA-v778-237x-gjrc  Critical  
-golang.org/x/net     v0.23.0    0.33.0    go-module  GHSA-w32m-9786-jp63  High
+No vulnerabilities found
 ```
 
-### weaveexec: (2) 
+### weaveexec: (0) 
 
 ```
-NAME                 INSTALLED  FIXED-IN  TYPE       VULNERABILITY        SEVERITY 
-golang.org/x/crypto  v0.21.0    0.31.0    go-module  GHSA-v778-237x-gjrc  Critical  
-golang.org/x/net     v0.23.0    0.33.0    go-module  GHSA-w32m-9786-jp63  High
+No vulnerabilities found
 ```
 
