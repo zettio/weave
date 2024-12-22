@@ -26,6 +26,12 @@ PROXY_HOST=${PROXY_HOST:-$(echo "${DOCKER_HOST#tcp://}" | cut -s -d: -f1)}
 PROXY_HOST=${PROXY_HOST:-127.0.0.1}
 DOCKER_CLIENT_HOST=${DOCKER_CLIENT_HOST:-$DOCKER_HOST}
 
+# From weave 2.9.0 onwards, the weave image sets up
+# the iptables-nft backend as default. To use the
+# iptables-legacy backend, the environment variable
+# IPTABLES_BACKEND needs to be set to "legacy"
+IPTABLES_BACKEND=${IPTABLES_BACKEND:-nft}
+
 # Define some regular expressions for matching addresses.
 # The regexp here is far from precise, but good enough.
 IP_REGEXP="[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"
@@ -160,6 +166,7 @@ exec_remote() {
         -e CHECKPOINT_DISABLE \
         -e AWSVPC   \
         -e DOCKER_API_VERSION \
+        -e IPTABLES_BACKEND \
         -t \
         $WEAVEEXEC_DOCKER_ARGS $EXEC_IMAGE --local "$@"
 }
@@ -322,7 +329,17 @@ run_iptables() {
         CHECKED_IPTABLES_W=1
     fi
 
-    iptables $IPTABLES_W "$@"
+    # From weave 2.9.0 onwards, the weave image sets up
+    # the iptables-nft backend as default. To use the
+    # iptables-legacy backend, the environment variable
+    # IPTABLES_BACKEND needs to be set to "legacy"
+    if [ "$IPTABLES_BACKEND" = "legacy" ];then
+        iptables-legacy "$IPTABLES_W" "$@"
+    else
+        iptables "$IPTABLES_W" "$@"
+    fi
+
+    
 }
 
 # Insert a rule in iptables, if it doesn't exist already
@@ -372,6 +389,7 @@ util_op() {
         weaveutil "$@"
     else
         docker run --rm --pid host $(docker_run_options) \
+            -e IPTABLES_BACKEND \
             --entrypoint=/usr/bin/weaveutil $EXEC_IMAGE "$@"
     fi
 }
@@ -1223,6 +1241,7 @@ launch() {
         -e WEAVE_PASSWORD \
         -e EXEC_IMAGE=$EXEC_IMAGE \
         -e CHECKPOINT_DISABLE \
+        -e IPTABLES_BACKEND \
         $WEAVE_DOCKER_ARGS \
         $IMAGE \
         $COVERAGE_ARGS \

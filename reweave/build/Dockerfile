@@ -86,7 +86,7 @@ EOMAKE
 # Stage 3: Alpine Base
 # This stage exists in case there are any additional tweaks 
 # required in the alpine base image.
-FROM --platform=linux/${TARGETARCH} ${ALPINE_BASEIMAGE} as alpinebase
+FROM --platform=linux/${TARGETARCH} ${ALPINE_BASEIMAGE} AS alpinebase
 # Any additional tweaks will appear here
 # Last update on top of alpine:3.19.1
 RUN apk update \
@@ -124,11 +124,13 @@ RUN <<EOWEAVER
                   bind-tools \
                   ca-certificates
       # Alpine 3.19 made nftables the default backend for iptables
-      # For backward compatibility, the following is required:
+      # From weave version 2.9.0 onwards, weave will also assume 
+      # the same, but will include iptables-legacy for backward
+      # compatibility.
       apk add iptables-legacy
-      ln -sf /sbin/iptables-legacy /sbin/iptables
-      ln -sf /sbin/iptables-legacy-save /sbin/iptables-save
-      ln -sf /sbin/iptables-legacy-restore /sbin/iptables-restore
+      # ln -sf /sbin/iptables-legacy /sbin/iptables
+      # ln -sf /sbin/iptables-legacy-save /sbin/iptables-save
+      # ln -sf /sbin/iptables-legacy-restore /sbin/iptables-restore
       rm -rf /var/cache/apk/*
 EOWEAVER
 
@@ -218,11 +220,13 @@ RUN <<EONPC
       mknod /var/log/ulogd.pcap p
       
       # Alpine 3.19 made nftables the default backend for iptables
-      # For backward compatibility, the following is required:
+      # From weave version 2.9.0 onwards, weave will also assume 
+      # the same, but will include iptables-legacy for backward
+      # compatibility.
       apk add iptables-legacy
-      ln -sf /sbin/iptables-legacy /sbin/iptables
-      ln -sf /sbin/iptables-legacy-save /sbin/iptables-save
-      ln -sf /sbin/iptables-legacy-restore /sbin/iptables-restore
+      # ln -sf /sbin/iptables-legacy /sbin/iptables
+      # ln -sf /sbin/iptables-legacy-save /sbin/iptables-save
+      # ln -sf /sbin/iptables-legacy-restore /sbin/iptables-restore
 
       rm -rf /var/cache/apk/*
 EONPC

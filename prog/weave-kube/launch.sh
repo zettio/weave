@@ -27,14 +27,17 @@ setup_iptables_backend() {
       fi
     fi
     printf "iptables backend mode: %s\n" "$mode"
-    if [ "$mode" = "nft" ]; then
+    # The weave-kube image uses the iptables-nft tools as default
+    # from weave 2.9.0 onwards, but includes the legacy tools. If
+    # legacy is detected, change the default symlinks.
+    if [ "$mode" = "legacy" ]; then
       [ -n "$WEAVE_DEBUG" ] && echo "Changing iptables symlinks..."
       rm /sbin/iptables
       rm /sbin/iptables-save
       rm /sbin/iptables-restore
-      ln -s /sbin/iptables-nft /sbin/iptables
-      ln -s /sbin/iptables-nft-save /sbin/iptables-save
-      ln -s /sbin/iptables-nft-restore /sbin/iptables-restore
+      ln -s /sbin/iptables-legacy /sbin/iptables
+      ln -s /sbin/iptables-legacy-save /sbin/iptables-save
+      ln -s /sbin/iptables-legacy-restore /sbin/iptables-restore
     fi
 }
 

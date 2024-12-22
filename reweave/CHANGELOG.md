@@ -2,6 +2,27 @@
 
 All changes made to the weave net codebase since the fork will be documented in this file.
 
+## 2.9.0-beta1
+
+From this version onwards, we will assume that the default backend for `iptables` is `iptables-nft`. For backward compatibility, we will include `iptables-legacy` in the weave images, and provide a way to use that if required.
+
+### Changed
+
+* Upgraded golang.org/x/crypto to v0.31.1
+* Upgraded golang.org/x/net to v0.33.0
+* Which upgraded:
+	golang.org/x/mod v0.17.0
+    golang.org/x/sync v0.10.0
+	golang.org/x/term v0.27.0
+	golang.org/x/text v0.21.0
+* Ran `go mod tidy` and `go mod vendor`
+
+### Added
+
+* The Dockerfile was modified to keep the default iptables backend (nft) for all Alpine-based images, and to include the legacy backend but not set it as default.
+* The `weave` script was modified to accept and propogate a new environment variable called `IPTABLES_BACKEND`, whose default value is `nft`. If its value is set to `legacy`, the script will use the command `iptables-legacy` instead of `iptables` when invoking that tool.
+* The `launch.sh` script, which is the entry point for the `weave-kube` and `weave-npc` images, was modified to assume the `nft` backend as default, and to change the backend only if legacy mode was autodiscovered or set via the existing environment variable `IPTABLES_BACKEND`.
+
 ## 2.8.10
 
 ### Changed
